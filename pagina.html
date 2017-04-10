@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Park Connected</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="actions.js"></script>
+ 
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<!-- Sezione del navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage"><img src="car-icon.png" width="50" height="50"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVIZI</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#iscr">ISCRIVITI</a></li>
+        <li><a href="#contact">CONTATTI</a></li>
+        <li><a href="#map">MAPPA</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Sezione del login -->
+<div class="jumbotron text-center">
+  <h1>Park Connected</h1> 
+  <p>Trova ovunque il tuo parcheggio</p> 
+    <form onsubmit="return insertLogin(this)" id="form" name="form">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="email" type="text" class="form-control" name="emaillog" placeholder="Email">
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="password" type="password" class="form-control" name="passwordlog" placeholder="Password" size="25">
+                </div>
+
+                <div class="checkbox">
+                    <label><input type="checkbox">Ricordami</label>
+                </div>
+
+                <button type="submit" class="btn">Log-in</button>
+                </form>
+</div>
+
+<!-- Sezione About -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Qualcosa riguardo noi</h2><br>
+      <h4>Cerca. Trova. Parcheggio.</h4><br>
+      <p>Siamo nati con l'intenzione di migliorare il comfort di guida di tutti i guidatori in modo che ognuno riesca a trovare un parcheggio.</p>
+      <br><button class="btn btn-default btn-lg">Entra in Contatto</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-road logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>I NOSTRI VALORI</h2><br>
+      <h4><strong>LA NOSTRA MISSIONE:</strong> Vogliamo soddisfare tutti i guidatori in viaggio sulle nostre strade. Garantire a tutti la possibilità di trovare parcheggio in ogni circostanza.</h4><br>
+      <p><strong>LA NOSTRA FILOSOFIA:</strong> Creare una rete di condivisione tra tutti gli utenti iscritti per facilitare a tutti la possibilità di parcheggiare la propria auto.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Sezione servizi -->
+<div id="services" class="container-fluid text-center">
+  <h2>SERVIZI</h2>
+  <h4>Cosa offriamo</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>SICUREZZA</h4>
+      <p>La tua auto sarà al sicuro</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-send logo-small"></span>
+      <h4>CONDIVIDI</h4>
+      <p>Basta un semplice messaggio</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-euro logo-small"></span>
+      <h4>GRATIS</h4>
+      <p>Non spenderai nulla</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-user logo-small"></span>
+      <h4>UNISCITI</h4>
+      <p>Migliaia di utenti iscritti</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>CERTIFICATO</h4>
+      <p>Esperienza certificata</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo-small"></span>
+      <h4 style="color:#303030;">LOCALIZZA</h4>
+      <p>Trova qualsiasi parcheggio</p>
+    </div>
+  </div>
+</div>
+
+<!-- Sezione portfolio -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Portfolio</h2><br>
+  <h4>Le principali città dove i nostri utenti hanno trovato parcheggio</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="genova.jpg" alt="Genova" width="400" height="300">
+        <p><strong>Genova</strong></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="torino.jpg" alt="Torino" width="400" height="300">
+        <p><strong>Torino</strong></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="roma.jpg" alt="Roma" width="400" height="300">
+        <p><strong>Roma</strong></p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>Cosa ne pensano i nostri utenti</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+   
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"Riesco sempre a trovare il parcheggio"<br><span>Mario Rossi</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Splendido!"<br><span>Marina Verdi</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Come facevo prima?"<br><span>Michele Martelli</span></h4>
+      </div>
+    </div>
+
+    <!-- Spostamento commenti -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Precedente"></span>
+      <span class="sr-only">Precedente</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Successivo"></span>
+      <span class="sr-only">Successivo</span>
+    </a>
+  </div>
+</div>
+
+<!-- Campo di iscrizione -->
+<div id="iscr" class="container-fluid">
+  <div class="text-center">
+      <h2>Iscriviti</h2>
+            <h4>Approfitta anche tu del nostro servizio</h4>
+          </div>
+          <div class="row slideanim">
+
+                  <form class="form-horizontal" action="actions.php" method="post" onsubmit="return validateForm(this)" id="form1" name="form1">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="name">Nome:</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" name="name">
+                      </div>
+                    </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-sm-2" for="surname">Cognome:</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="surname" name="surname">
+                      </div>
+                    </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-sm-2" for="name">Data di nascita:</label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="date" name="date" placeholder="(GG/MM/AAAA)">
+                      </div>
+                    </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-sm-2" for="car">Marca dell'auto:</label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="car" name="car">
+                      </div>
+                    </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-sm-2" for="targa">Targa dell'auto:</label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="targa" name="targa" placeholder="(AB-000-CD)">
+                      </div>
+                    </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Email:</label>
+                      <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" name="email">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="control-label col-sm-2" for="pwd">Password:</label>
+                      <div class="col-sm-10">          
+                        <input type="password" class="form-control" id="pwd" name="password">
+                      </div>
+                    </div>
+                      <div class="form-group">
+                      <label class="control-label col-sm-2" for="conferma">Conferma password:</label>
+                      <div class="col-sm-10">          
+                        <input type="password" class="form-control" id="conferma" name="conferma">
+                      </div>
+                    </div>
+                      <div class="form-group">
+                      <label class="control-label col-sm-2" for="conferma">Seleziona la tua città:</label>
+                      <div class="col-sm-10">          
+                         <select name="citta">
+                                    <option>Seleziona</option>
+                                    <option value="Roma">Bologna</option>
+                                    <option value="Milano">Firenze</option>
+                                    <option value="Genova">Genova</option>
+                                    <option value="Napoli">Milano</option>
+                                    <option value="Firenze">Napoli</option>
+                                    <option value="Bologna">Roma</option>
+                                  </select>
+                      </div>
+                    </div>
+                    <div class="form-group">        
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary" id="btnn" >Iscriviti</button>
+                      </div>
+                    </div>
+                  </form>
+    </div>
+</div>
+
+<!-- Sezione contatti -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTATTI E CONTATTACI</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contattaci e riceverai la nostra risposta entro 24h.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Genova, IT</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +39 123456789</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> email@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Il tuo nome" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="La tua email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Commenta" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-primary pull-right" type="submit" id="btnInv" onclick="return Cancel(comments);">Invia</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Contenuto del modal-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Inviato con successo!</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Grazie per averci lasciato il tuo feedback.</p>
+                  <p>Attendi la nostra risposta.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Chiudi</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+<!--Google Maps -->
+    <div id="map" class="container-fluid" style="height:400px;width:100%;">
+<div id="googleMap"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcPIVGgSn8mg-NpDFLoSKTMcS6YXFUmpg&callback=initMap"></script>
+<!--https://www.w3schools.com/graphics/google_maps_basic.asp-->
+</div>
+    
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Torna Su</p>
+</footer>
+
+</body>
+</html>
